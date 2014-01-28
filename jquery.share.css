@@ -1,0 +1,18 @@
+/*
+ * Author - Harshen Amarnath Pandey
+ * Version - 1.0.0
+ * Release - 28th January 2014
+ * Copyright (c) 2014 - 2018 Harshen Pandey
+*/
+/* jquery.share.css*/
+.boxa {width: auto; position: absolute; border: solid #ddd 1px; height: auto; z-index: 9999; background-color: #eee; padding-left: 5px; padding-bottom: 10px; padding-top: 10px; }
+.st_facebook {background: url('IMAGES/social-sprites-two.png') -2px -28px no-repeat; display: inline-block; padding: 0 !important; transition:all 0.3s ease 0s; width:24px; height:24px; margin-right: 5px; vertical-align: middle;}
+.st_facebook:hover {background-position: -2px -1px;}
+.st_twitter {background: url('IMAGES/social-sprites-two.png') -36px -28px no-repeat; display: inline-block; padding: 0 !important; transition:all 0.3s ease 0s; width:24px; height:24px; margin-right: 5px; vertical-align: middle;}
+.st_twitter:hover {background-position: -36px -1px;}
+.st_linkedin {background: url('IMAGES/social-sprites-two.png') -70px -28px no-repeat; display: inline-block; padding: 0 !important; transition:all 0.3s ease 0s;  width:24px; height:24px; margin-right: 5px; vertical-align: middle;}
+.st_linkedin:hover {background-position: -70px -1px;}
+.st_tumblr {background: url('IMAGES/social-sprites-two.png') -104px -28px no-repeat; display: inline-block; padding: 0 !important; transition:all 0.3s ease 0s; width:24px; height:24px; margin-right: 5px; vertical-align: middle;}
+.st_tumblr:hover {background-position: -104px -1px;}
+.st_pinterest {background: url('IMAGES/social-sprites-two.png') -172px -28px no-repeat; display: inline-block; padding: 0 !important; transition:all 0.3s ease 0s; width:24px; height:24px; margin-right: 5px; vertical-align: middle;}
+.st_pinterest:hover {background-position: -172px -1px;}

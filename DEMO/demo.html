@@ -1,0 +1,231 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title title="jquery share plugin Demo">jquery share Demo</title>
+        <meta name="description" content="jQuery plugin to share content.">
+            <meta name="keywords" content="jQuery, plugin, share">
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+                    <link rel="stylesheet" type="text/css" href="../jquery.share.css">
+                        <link rel="stylesheet" type="text/css" href="demo.css">
+                            <script type="text/javascript" src ="../LIB/jquery-2.0.3.js"></script>
+                            <script type="text/javascript" src ="../jquery.share.js"></script>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    $('.share').share({
+                                        socialIcons : {
+                                            facebook : {
+                                                show : false
+                                            },
+                                            pinterest : {
+                                                show : true,
+                                                media : "http://goo.gl/OCMfWB",
+                                                description : "Harshen Pandey"
+                                            }
+                                        },
+                                        mandatory : {
+                                            containerId: "boxa",
+                                            APIkey : "bgrswprtt3nzgudfxr5zkjur",
+                                            URL : "http://www.nature.org/"
+                                        },
+                                        display : {
+                                            background : "#321243"
+                                        }
+                                    });
+
+                                    $('.share_butterfly').share({
+                                        mandatory : {
+                                            containerId: "boxb",
+                                            APIkey : "bgrswprtt3nzgudfxr5zkjur",
+                                            URL : "http://www.wwf.org/"
+                                        }
+                                    });
+                                });
+                            </script>
+                            </head>
+                            <body>
+                                <div id="main">
+                                    <header>
+                                        <h1 id="banner"  style="text-align: center;"><a href="http://plugins.jquery.com/share/" target="_blank" title="jQuery Share Plugin">jQuery Share Plugin</a> Demo</h1>
+                                        <hr>
+                                            <p><a href="http://github.com/harshen/jquery-share/zipball/1.0.0" title="Download jQuery Share">Download</a></p>
+                                            <p>Share is a customizable jQuery Plugin which lets you share a website, post, article, blog or anything which has a URL. Share it on facebook, twitter, linkedin, pinterest or tumblr.</p>
+                                    </header>
+                                    <br/>
+                                    <h2 style="color :#0625BC; font-weight: bold;"><a id="initial">Initial Setup</a></h2>
+                                    <p>Add this in html page</p><pre style="width:590px;">
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-2.0.3.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.share.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;jquery.share.css&quot;/&gt;</pre>
+                                    <p>Add the share image below your content.</p>
+                                    <pre style="width:535px;">&lt;a href=&quot;javascript&#58;void&#40;0&#41;&quot; class=&quot;share&quot; title=&quot;Share This&quot;&gt;
+&lt;img src=&quot;IMAGES&frasl;iconShareGreenSmall.png&quot; title=&quot;Share This&quot;&frasl;&gt;
+&lt;/a&gt;
+                                    </pre>
+                                    <p>Also see to it that you set the path of "social-sprites-two.png" properly in jquery.share.css w.r.t where you include the IMAGES folder.</p>
+                                    <p>Add a container "div" for the share icons and give id attribute to it. Note that the container "div" should have no parent element. It should be directly under the "body" tag.</p>
+                                    <pre style="width:250px;">&lt;div  id=&quot;boxa&quot;&gt; &lt;/div&gt;</pre>
+                                    <p>Prior to using the Share plugin, it is required to <br/><b>Register a new Mashery ID to access developer.sharethis.com</b> by Visiting <br/>
+                                        <a href="http://developer.sharethis.com/member/register" target="_blank" title="http://developer.sharethis.com/member/register">http://developer.sharethis.com/member/register</a></p>
+                                    <p>Just SignUp and you will recieve a Web API Key for your new registered application.</p>
+                                    <br/>
+                                    <h2 style="color :#0625BC; font-weight: bold;">Using the Share Plugin</h2>
+                                    <p>Call the plugin function "share" on the class of "a" tag, with the required options. for example:-</p>
+                                    <pre style="width:535px;">
+&lt;script type="text/javascript"&gt;
+        &#36;(document).ready(function(){
+            &#36;('.share').share({
+                socialIcons &#58; {
+                    facebook &#58; {
+                        show &#58; false
+                    }&sbquo;
+                    pinterest &#58; {
+                        show &#58; true&sbquo;
+                        media &#58; &quot;http://goo.gl/OCMfWB&quot;&sbquo;
+                        description &#58; &quot;Harshen Amarnath Pandey&quot;
+                    }
+                }&sbquo;
+                mandatory &#58; {
+                    containerId &#58; &quot;boxa&quot;&sbquo;
+                    APIkey &#58; &quot;bgrswprtt3nzgudfxr5zkjur&quot;&sbquo;
+                    URL &#58; &quot;http://www.nature.org/&quot;
+                }&sbquo;
+                display &#58; {
+                    background &#58; &quot;#321243&quot;
+                }
+            })&#59;
+        })&#59;
+&lt;/script&gt;</pre>
+                                    <p>For more information on how to use different options see <a href="#options" title="Options">Options</a>.</p>
+                                    <p>Now just hover over the share icon.</p><br/>
+                                    <div>
+                                        <div class="explore">
+                                            <div class="explore-top">
+                                                <div class="explore-top-text">
+                                                    <p><b>Leaf</b></p>
+                                                    <hr>
+                                                </div>
+                                                <div class="explore-middle">
+                                                    <a href="http://www.nature.org/" target="_blank">
+                                                        <img class="" alt="Indicator" src="images/drop.jpeg">
+                                                    </a>
+                                                </div>
+                                                <div class="explore-bottom">
+                                                    <a href="javascript:void(0);" class="share" title="Share This"><img src="../IMAGES/iconShareGreenSmall.png" title="Share This"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><br/>
+                                    <h3><u>Providing just the mandatory options</u></h3>
+                                    <p>By providing just the mandatory options as below:-</p>
+                                    <pre style="width:535px;">
+&lt;script type="text/javascript"&gt;
+        &#36;(document).ready(function(){
+            &#36;('.share_butterfly').share({
+                mandatory &#58; {
+                    containerId &#58; &quot;boxb&quot;&sbquo;
+                    APIkey &#58; &quot;bgrswprtt3nzgudfxr5zkjur&quot;&sbquo;
+                    URL &#58; &quot;http://www.wwf.org/&quot;&sbquo;
+                }
+            })&#59;
+        })&#59;
+&lt;/script&gt;</pre>
+                                    <p>You get this (Hover over the share icon)</p><br/>
+                                    <div>
+                                        <div class="explore">
+                                            <div class="explore-top">
+                                                <div class="explore-top-text">
+                                                    <p><b>Butterfly</b></p>
+                                                    <hr>
+                                                </div>
+                                                <div class="explore-middle">
+                                                    <a href="http://www.wwf.org/" target="_blank">
+                                                        <img class="" alt="Indicator" src="images/butterfly.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="explore-bottom">
+                                                    <a href="javascript:void(0);" class="share_butterfly" title="Share This"><img src="../IMAGES/iconShareGreenSmall.png" title="Share This"/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 style="color :#0625BC; font-weight: bold;"><a id="options">Options</a></h2>
+                                    <p>Following are the different options provided for call to the "share" method with their default values.</p>
+                                    <pre  style="width:200px;">
+socialIcons &#58; {
+    facebook &#58; {
+        show &#58; true
+    }&sbquo;
+    twitter &#58; {
+        show &#58; true
+    }&sbquo;
+    linkedin &#58; {
+        show &#58; true
+    }&sbquo;
+    pinterest &#58; {
+        show &#58; false&sbquo;
+        media &#58; &quot;&quot;&sbquo;
+        description &#58; &quot;&quot;
+    }&sbquo;
+    tumblr &#58; {
+        show &#58; true
+    }
+}&sbquo;
+mandatory &#58; {
+    containerId &#58; ""&sbquo;
+    APIkey &#58; ""&sbquo;
+    URL &#58; ""
+}&sbquo;
+display &#58; {
+    background &#58; &quot;#eee&quot;
+}
+                                    </pre>
+                                    <p>All available options for customizing the plugin are explained below:-</p>
+                                    <div id="sizes_demo">
+                                        <div><strong>socialIcons</strong></div><br/>
+                                        <span style="font-style: italic">1) <u>facebook</u></span><br/><br/>
+                                        <u>show</u>
+                                        <p>The default value of "show" for facebook is true, so on hovering over the share image, facebook icon appears and you are able to share your content on facebook.
+                                            It can be set to either "true" or "false".</p>
+                                        <span style="font-style: italic">2) <u>twitter</u></span><br/><br/>
+                                        <u>show</u>
+                                        <p>The default value of "show" for twitter is true, so on hovering over the share image, twitter icon appears and you are able to share your content on twitter.
+                                            It can be set to either "true" or "false".</p>
+                                        <span style="font-style: italic">3) <u>linkedin</u></span><br/><br/>
+                                        <u>show</u>
+                                        <p>The default value of "show" for linkedin is true, so on hovering over the share image, linkedin icon appears and you are able to share your content on linkedin.
+                                            It can be set to either "true" or "false".</p>
+                                        <span style="font-style: italic">4) <u>pinterest</u></span><br/><br/>
+                                        <u>show</u>
+                                        <p style="text-align: justify;">The default value of "show" for pinterest is false, so on hovering over the share image, pinterest icon does not appear by default. This is so because sharing on pinterest requires "media" and "description" options to be set which are empty by default.
+                                            Setting "show" to "true" will enable sharing on pinterest if "media" and "description" are set. "show" can be set to either "true" or "false".</p>
+                                        <u>media</u>
+                                        <p>"media" is by default empty. It means that when "show" for pinterest is true, it is mandatory to give a web URL for the image(media) because to share on pinterest, web URL of image is mandatory.</p>
+                                        <u>description</u>
+                                        <p>"description" is by default empty. It means that when "show" for pinterest is true, it is necessary to give a description for the content. If not provided, it has to be provided before hitting the "Pin it" button on pinterest.</p>
+                                        <span style="font-style: italic">5) <u>tumblr</u></span><br/><br/>
+                                        <u>show</u>
+                                        <p>The default value of "show" for tumblr is true, so on hovering over the share image, tumblr icon appears and you are able to share your content on tumblr.
+                                            It can be set to either "true" or "false".</p><br/>
+                                        <div><strong>mandatory</strong></div><br/>
+                                        <p>All the options below are mandatory to provide as they are not set by default:-</p>
+                                        <span style="font-style: italic">1) <u>containerId</u></span><br/><br/>
+                                        <p>"containerId" is the id of the div container which will contain all the social Icons. By default it is empty because it is mandatory to provide an id of a div container for the social Icons. Also, please see that the div has no parent element and is directly under the body tag.</p><br/>
+                                        <span style="font-style: italic">2) <u>APIkey</u></span><br/><br/>
+                                        <p>"APIkey" is the Web API Key for your registered application. By default it is empty because it is mandatory to provide a Web API key. To know how to register your application for Web API key, see <a href="#initial" title="Initial Setup">Initial Setup</a>.</p><br/>
+                                        <span style="font-style: italic">3) <u>URL</u></span><br/><br/>
+                                        <p>"URL" is the web url of the content which you want to share. By default it is empty because it is mandatory to provide a web url to be shared across multiple networks.</p><br/>
+                                        <div><strong>display</strong></div><br/>
+                                        <span style="font-style: italic"><u>background</u></span><br/><br/>
+                                        <p>"background" is the background color of the container div. You can set it as per your choice. By default it is set to "#eee".</p>
+                                    </div>
+                                </div>
+                                <div id="boxa"></div>
+                                <div id="boxb"></div>
+                                <footer style="text-align: center;">
+                                    <p>Licensed under the <a href="http://opensource.org/licenses/MIT" target="_blank" title="MIT">MIT</a> and <a href="http://www.gnu.org/licenses/gpl.html" target="_blank" title="GPL v3">GPL v3</a> Project page <a href="https://github.com/harshen/jquery-share" target="_blank" title="Link">Link</a>
+                                        Author: <a href="http://harshen.github.io/" target="_blank" title="Harshen Pandey">Harshen Pandey</a> (harshenpandey@gmail.com)</p>
+                                </footer>
+                            </body>
+                            <br/><br/>
+                            </html>

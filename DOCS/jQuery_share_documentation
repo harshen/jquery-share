@@ -1,0 +1,222 @@
+jquery-share Plugin 
+===================
+
+(http://plugins.jquery.com/share/)
+
+Share your content.
+
+--------------
+Introduction:-
+--------------
+
+Share Plugin lets you share anything which has a URL on facebook, twitter, linkedin, pinterest or tumblr.
+
+-------------
+Description:-
+-------------
+
+Share is a customizable jQuery Plugin which lets you share a website, post, article, blog or anything which has a URL. Share it on facebook, twitter, linkedin, pinterest or tumblr. Customize on which networks you want to share and also change the share icons background as per choice.
+
+-----------------
+Getting Started:-
+-----------------
+
+Include jQuery, the plugin and its css file on a page.
+
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="jquery.share.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery.share.css"/>
+
+Add the share image below your content.
+
+	<a href="javascript:void(0)" class="share" title="Share This">
+		<img src="IMAGES⁄iconShareGreenSmall.png" title="Share This"⁄>
+	</a>
+
+Also see to it that you set the path of "social-sprites-two.png" properly in jquery.share.css w.r.t where you include the IMAGES folder.
+
+Add a container "div" for the share icons and give id attribute to it. Note that the container "div" should have no parent element. It should be directly under the "body" tag.
+
+	<div  id="boxa"> </div>
+
+Prior to using the Share plugin, it is required to Register a new Mashery ID to access developer.sharethis.com by Visiting 
+
+http://developer.sharethis.com/member/register
+
+Just SignUp and you will recieve a Web API Key for your new registered application.
+
+------------------------
+Using the Share Plugin:-
+------------------------
+
+Call the plugin function "share" on the class of "a" tag, with the required options. for example:-
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('.share').share({
+		        socialIcons : {
+		            facebook : {
+		                show : false
+		            }‚
+		            pinterest : {
+		                show : true‚
+		                media : "http://goo.gl/OCMfWB"‚
+		                description : "Harshen Amarnath Pandey"
+		            }
+		        }‚
+		        mandatory : {
+		            containerId : "boxa"‚
+		            APIkey : "bgrswprtt3nzgudfxr5zkjur"‚
+		            URL : "http://www.nature.org/"
+		        }‚
+		        display : {
+		            background : "#321243"
+		        }
+		    });
+		});
+	</script>
+
+Here, "share" is the class of "a" tag which has share icon.
+Now just hover over the share icon and you will see the plugin working.
+
+
+Providing just the mandatory options:-
+--------------------------------------
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('.share_butterfly').share({
+		        mandatory : {
+		            containerId : "boxb"‚
+		            APIkey : "bgrswprtt3nzgudfxr5zkjur"‚
+		            URL : "http://www.wwf.org/"‚
+		        }
+		    });
+		});
+	</script>
+
+By providing just the mandatory options, you get the share functionality for default options.(i.e. facebook, twitter, linkedin and tumblr)
+
+---------
+Options:-
+---------
+
+Following are the different options provided for call to the "share" method with their default values.
+
+	socialIcons : {
+	    facebook : {
+		show : true
+	    }‚
+	    twitter : {
+		show : true
+	    }‚
+	    linkedin : {
+		show : true
+	    }‚
+	    pinterest : {
+		show : false‚
+		media : ""‚
+		description : ""
+	    }‚
+	    tumblr : {
+		show : true
+	    }
+	}‚
+	mandatory : {
+	    containerId : ""‚
+	    APIkey : ""‚
+	    URL : ""
+	}‚
+	display : {
+	    background : "#eee"
+	}
+
+
+All available options for customizing the plugin are explained below:-
+
+socialIcons
+------------
+
+1) facebook
+
+-> show
+
+The default value of "show" for facebook is true, so on hovering over the share image, facebook icon appears and you are able to share your content on facebook. It can be set to either "true" or "false".
+
+2) twitter
+
+-> show
+
+The default value of "show" for twitter is true, so on hovering over the share image, twitter icon appears and you are able to share your content on twitter. It can be set to either "true" or "false".
+
+3) linkedin
+
+-> show
+
+The default value of "show" for linkedin is true, so on hovering over the share image, linkedin icon appears and you are able to share your content on linkedin. It can be set to either "true" or "false".
+
+4) pinterest
+
+-> show
+
+The default value of "show" for pinterest is false, so on hovering over the share image, pinterest icon does not appear by default. This is so because sharing on pinterest requires "media" and "description" options to be set which are empty by default. Setting "show" to "true" will enable sharing on pinterest if "media" and "description" are set. "show" can be set to either "true" or "false".
+
+-> media
+
+"media" is by default empty. It means that when "show" for pinterest is true, it is mandatory to give a web URL for the image(media) because to share on pinterest, web URL of image is mandatory.
+
+-> description
+
+"description" is by default empty. It means that when "show" for pinterest is true, it is necessary to give a description for the content. If not provided, it has to be provided before hitting the "Pin it" button on pinterest.
+
+5) tumblr
+
+-> show
+
+The default value of "show" for tumblr is true, so on hovering over the share image, tumblr icon appears and you are able to share your content on tumblr. It can be set to either "true" or "false".
+
+
+mandatory
+----------
+
+All the options below are mandatory to provide as they are not set by default:-
+
+1) containerId
+
+"containerId" is the id of the div container which will contain all the social Icons. By default it is empty because it is mandatory to provide an id of a div container for the social Icons. Also, please see that the div has no parent element and is directly under the body tag.
+
+2) APIkey
+
+"APIkey" is the Web API Key for your registered application. By default it is empty because it is mandatory to provide a Web API key. To know how to register your application for Web API key, see "Getting Started".
+
+3) URL
+
+"URL" is the web url of the content which you want to share. By default it is empty because it is mandatory to provide a web url to be shared across multiple networks.
+
+
+display
+--------
+
+1) background
+
+"background" is the background color of the container div. You can set it as per your choice. By default it is set to "#eee".
+
+
+
+Refer the demo for more clarity.
+
+--------------
+Dependencies:-
+--------------
+
+jQuery greater than or equal to version 1.7.
+
+---------
+Support:-
+---------
+
+Please post bug reports and other contributions (enhancements, features) to the GitHub issue tracker.
+
+Copyright (c) 2014 Harshen Pandey
+Licensed under the MIT and GPLv3 license.
+           

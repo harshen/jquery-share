@@ -1,0 +1,30 @@
+.explore {width: 300px; border:solid #FF01B7 3px; border-radius: 8px; color: #666; margin:0px auto; position : relative; margin-bottom: 40px; background-color: #B8FDFD;}
+
+.explore-top-text a.next {background:url('images/fancybox_sprite.png') no-repeat 0 -72px; text-indent: -9999px; z-index: 9; width:36px; height: 36px; position: absolute; top: 50%; right: 0px;}
+.explore-top-text a.prev {background:url('images/fancybox_sprite.png') no-repeat 0 -38px; text-indent: -9999px; z-index: 9; width:36px; height: 36px; position: absolute; top: 50%; left: 0px;}
+.explore-top-text a:hover {color: #232323; text-decoration: underline;}
+.explore-top-text a.linkpost { color: #00A2E8; display: block; font-weight: bold;  margin-bottom: 10px;}
+.explore-top-text a.linkpost:hover {text-decoration: none; color: #00A2E8;}
+
+.explore-middle {position: relative; text-align: center;}
+
+.explore-bottom {border-top:solid #e4e4e4 1px; padding: 10px; background-color: #8DDDFF;}
+
+.explore-top-text {padding: 10px 10px 0; margin:0px auto; position : relative; }
+.explore-top-text p {font-size: 14px; color: #666; line-height: 20px; margin-bottom: 10px;}
+.explore-top-text a {color: #232323;}
+.explore-top-text a.next {background:url('images/fancybox_sprite.png') no-repeat 0 -72px; text-indent: -9999px; z-index: 9; width:36px; height: 36px; position: absolute; top: 50%; right: 0px;}
+.explore-top-text a.prev {background:url('images/fancybox_sprite.png') no-repeat 0 -38px; text-indent: -9999px; z-index: 9; width:36px; height: 36px; position: absolute; top: 50%; left: 0px;}
+.explore-top-text a:hover {color: #232323; text-decoration: underline;}
+.explore-top-text a.linkpost { color: #00A2E8; display: block; font-weight: bold;  margin-bottom: 10px;}
+.explore-top-text a.linkpost:hover {text-decoration: none; color: #00A2E8;}
+
+#main {margin:0px auto; padding:10px; width : 1000px; position:relative; background-color: #CCFFF6; border: solid #5A01FF 4px; border-radius: 15px;}
+body{margin:0px; padding:0px;}
+
+pre{
+    background:#F8F8D2;padding:10px;
+    border: 2px solid #673E3E;
+    border-radius: 3px;
+    color: #222222;
+}

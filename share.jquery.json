@@ -1,0 +1,40 @@
+{
+"name": "share",
+"title": "jQuery share",
+"description": "Share is a customizable jQuery Plugin which lets you share a website, post, article, blog or anything which has a URL. Share it on facebook, twitter, linkedin, pinterest or tumblr.",
+"keywords": [
+"jquery",
+"share",
+"facebook",
+"twitter",
+"linkedin",
+"pinterest",
+"tumblr",
+"sharethis",
+"url"
+],
+"version": "1.0.0",
+"author": {
+"name": "Harshen Pandey",
+"email" : "harshenpandey@gmail.com",
+"url" : "http://harshen.github.io/"
+},
+"bugs": "https://github.com/harshen/jquery-share/issues",
+"homepage": "https://github.com/harshen/jquery-share",
+"demo" : "http://harshen.github.io/jquery-share/",
+"docs" : "https://raw.github.com/harshen/jquery-share/master/DOCS/jQuery_share_documentation",
+"licenses": [
+{
+"type": "MIT",
+"url": "http://opensource.org/licenses/MIT"
+},
+{
+"type": "GPLv3",
+"url": "http://www.gnu.org/licenses/gpl.html"
+}
+],
+"dependencies": {
+"jquery": ">=1.7"
+}
+}
+
